@@ -1,0 +1,10 @@
+<%- include('Partials/header'); %>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% for( let i = 0; i < dailyJournal.length; i++ ) { %>
+    <h1><%= dailyJournal[i].postT%></h1>
+    <p><%= dailyJournal[i].postB.substring(0,100)%> ... <a href="posts/<%= dailyJournal[i].postT %>">Read More</a></p>
+    
+<% } %>
+<%- include('Partials/footer'); %>
